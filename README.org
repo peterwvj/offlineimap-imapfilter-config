@@ -2,5 +2,29 @@
 
 * About this repository
 
-I use =offlineimap= to synchronise work and private emails. This
-repository contains my =offlineimap= configuration files.
+I use OfflineIMAP to synchronise work and private emails. This
+repository contains my OfflineIMAP configuration files:
+
+- =.offlineimaprc= My work (Microsoft Exchange) and private (Gmail)
+  email account configuration. This file uses small Python script,
+  named =.offlineimap.py= (see next item) to read the authentication
+  information that OfflineIMAP needs to synchronise emails for both
+  accounts.
+
+- =.offlineimap.py= A Python script that contains a single function
+  that uses =gpg2= to read the password associated with the email
+  account subject to synchronisation. The password is read from an
+  encrypted file =~/.authinfo.gpg= that stores the authentication on
+  the form described below.
+
+* Authentication information format
+
+The =~/.authinfo= file stores the authentication information for both
+accounts in the following format:
+
+```
+machine imap.gmail.com login peter.w.v.jorgensen@gmail.com port 993 password <password>
+machine smtp.gmail.com login peter.w.v.jorgensen@gmail.com port 587 password <password>
+machine imap.au.dk login uni\au219464 port 993 password <password>
+machine asmtp.au.dk login uni\au219464 port 587 password <password>
+```
