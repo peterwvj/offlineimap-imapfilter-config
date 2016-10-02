@@ -2,8 +2,15 @@
 
 * About this repository
 
-I use OfflineIMAP to synchronise work and private emails. This
-repository contains my OfflineIMAP configuration files:
+I use OfflineIMAP to synchronise work and private emails. On top of
+OfflineIMAP I use [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] (an email client for Emacs) to manage my
+emails. This repository contains my OfflineIMAP configuration
+files. My [[https://github.com/peterwvj/emacs-config-pvj/][mu4e configuration]] is available in one of my other
+repositories.
+
+* Repository structure
+
+This repository contains my OfflineIMAP configuration files:
 
 - =.offlineimaprc= My work (Microsoft Exchange) and private (Gmail)
   email account configuration. This file uses small Python script,
@@ -22,9 +29,9 @@ repository contains my OfflineIMAP configuration files:
 The =~/.authinfo= file stores the authentication information for both
 accounts in the following format:
 
-```
+#+BEGIN_SRC
 machine imap.gmail.com login peter.w.v.jorgensen@gmail.com port 993 password <password>
 machine smtp.gmail.com login peter.w.v.jorgensen@gmail.com port 587 password <password>
 machine imap.au.dk login uni\au219464 port 993 password <password>
 machine asmtp.au.dk login uni\au219464 port 587 password <password>
-```
+#+END_SRC
