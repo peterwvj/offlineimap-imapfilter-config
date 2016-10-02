@@ -1,0 +1,47 @@
+[general]
+accounts = Gmail, Work
+maxsyncaccounts = 1
+pythonfile = ~/.offlineimap.py
+
+[Account Gmail]
+localrepository = LocalGmail
+remoterepository = RemoteGmail
+
+[Account Work]
+localrepository = LocalWork
+remoterepository = RemoteWork
+
+[Repository LocalGmail]
+type = Maildir
+localfolders = ~/Maildir/private
+
+[Repository LocalWork]
+type = Maildir
+localfolders = ~/Maildir/work
+
+[Repository RemoteGmail]
+# Set auth mechanism to avoid problem described in
+# https://github.com/OfflineIMAP/offlineimap/issues/285
+auth_mechanisms = LOGIN
+type = Gmail
+remoteuser = peter.w.v.jorgensen@gmail.com
+remotepasseval = get_password_emacs("imap.gmail.com", "peter.w.v.jorgensen@gmail.com", "993")
+realdelete = yes
+maxconnections=2
+holdconnectionopen = true
+keepalive = 60
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository RemoteWork]
+type = IMAP
+remoteport = 993
+ssl = yes
+remotehost = imap.au.dk
+remoteuser = uni\au219464
+remotepasseval = get_password_emacs("imap.au.dk", "uni\\\\au219464", "993")
+realdelete = yes
+maxconnections=2
+folderfilter = lambda foldername: foldername not in ['Calendar', 'Suggested Contacts']
+holdconnectionopen = true
+keepalive = 60
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
