@@ -22,7 +22,7 @@ This repository contains my OfflineIMAP configuration files:
   that uses =gpg2= to read the password associated with the email
   account subject to synchronisation. The password is read from an
   encrypted file =~/.authinfo.gpg= that stores the authentication
-  information on the form described below.
+  information (see below).
 
 * Authentication information format
 
