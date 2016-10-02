@@ -35,3 +35,7 @@ machine smtp.gmail.com login peter.w.v.jorgensen@gmail.com port 587 password <pa
 machine imap.au.dk login uni\au219464 port 993 password <password>
 machine asmtp.au.dk login uni\au219464 port 587 password <password>
 #+END_SRC
+
+* Credits
+
+This OfflineIMAP configuration is inspired by areina's [[https://gist.github.com/areina/3879626][gist]]
