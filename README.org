@@ -1,0 +1,6 @@
+#+STARTUP: showall
+
+* About this repository
+
+I use =offlineimap= to synchronise work and private emails. This
+repository contains my =offlineimap= configuration files.
