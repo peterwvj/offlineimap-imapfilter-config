@@ -26,8 +26,8 @@ This repository contains my OfflineIMAP configuration files:
 
 * Authentication information format
 
-The =~/.authinfo= file stores the authentication information for both
-accounts in the following format:
+The =~/.authinfo.gpg= file stores the authentication information for
+both accounts in the following format:
 
 #+BEGIN_SRC
 machine imap.gmail.com login peter.w.v.jorgensen@gmail.com port 993 password <password>
