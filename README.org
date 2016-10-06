@@ -3,10 +3,10 @@
 * About this repository
 
 I use OfflineIMAP and [[https://github.com/lefcha/imapfilter][imapfilter]] to synchronise and filter work and
-private emails, respectively. On top of OfflineIMAP I use [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] (an
-email client for Emacs) to manage my emails. This repository contains
-my OfflineIMAP and imapfilter configuration files. My [[https://github.com/peterwvj/emacs-config-pvj/][mu4e
-configuration]] is available in one of my other repositories.
+private emails. On top of OfflineIMAP I use [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] (an email client for
+Emacs) to manage my emails. This repository contains my OfflineIMAP
+and imapfilter configuration files. My mu4e configuration is available
+in one of my [[https://github.com/peterwvj/emacs-config-pvj/][other repositories]].
 
 * Repository structure
 
