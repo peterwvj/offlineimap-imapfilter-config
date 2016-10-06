@@ -2,11 +2,11 @@
 
 * About this repository
 
-I use OfflineIMAP to synchronise work and private emails. On top of
-OfflineIMAP I use [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] (an email client for Emacs) to manage my
-emails. This repository contains my OfflineIMAP configuration
-files. My [[https://github.com/peterwvj/emacs-config-pvj/][mu4e configuration]] is available in one of my other
-repositories.
+I use OfflineIMAP and [[https://github.com/lefcha/imapfilter][imapfilter]] to synchronise and filter work and
+private emails, respectively. On top of OfflineIMAP I use [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] (an
+email client for Emacs) to manage my emails. This repository contains
+my OfflineIMAP and imapfilter configuration files. My [[https://github.com/peterwvj/emacs-config-pvj/][mu4e
+configuration]] is available in one of my other repositories.
 
 * Repository structure
 
@@ -21,8 +21,14 @@ This repository contains my OfflineIMAP configuration files:
 - =.offlineimap.py= A Python script that contains a single function
   that uses =gpg2= to read the password associated with the email
   account subject to synchronisation. The password is read from an
-  encrypted file =~/.authinfo.gpg= that stores the authentication
-  information (see below).
+  encrypted file =~/.authinfo.gpg= (not included in this repository)
+  that stores the authentication information (see below).
+
+- =.imapfilter/config.lua= The imapfilter configuration file is
+  written in [[https://www.lua.org/][Lua]] and currently set up to mark all spam mails as read
+  (for both of my accounts). This configuration file uses the
+  authentication information stored in =~/.authinfo.gpg= to filter the
+  emails.
 
 * Authentication information format
 
