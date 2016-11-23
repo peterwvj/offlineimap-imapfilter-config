@@ -19,7 +19,22 @@ privateAccount = IMAP {
   ssl = "tls1"
 }
 
-unreadWorkSpam = workAccount['Junk E-Mail']:is_unseen()
-unreadWorkSpam:mark_seen();
+--
+-- Private account
+--
+privateAccount.INBOX:check_status()
+
 unreadPrivateSpam = privateAccount['[Gmail]/Spam']:is_unseen()
-unreadPrivateSpam:mark_seen();
+unreadPrivateSpam:mark_seen()
+
+linkedIn = privateAccount.INBOX:contain_from('LinkedIn')
+linkedIn:mark_seen()
+linkedIn:move_messages(privateAccount['[Gmail]/Trash'])
+
+--
+-- Work account
+--
+workAccount.INBOX:check_status()
+
+unreadWorkSpam = workAccount['Junk E-Mail']:is_unseen()
+unreadWorkSpam:mark_seen()
