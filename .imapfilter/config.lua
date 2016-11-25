@@ -31,6 +31,10 @@ linkedIn = privateAccount.INBOX:contain_from('LinkedIn')
 linkedIn:mark_seen()
 linkedIn:move_messages(privateAccount['[Gmail]/Trash'])
 
+paypal = privateAccount.INBOX:contain_from('PayPal')
+paypal:mark_seen()
+paypal:move_messages(privateAccount['[Gmail]/Trash'])
+
 --
 -- Work account
 --
