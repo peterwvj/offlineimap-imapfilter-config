@@ -9,7 +9,8 @@ end
 workAccount = IMAP {
   server = 'imap.au.dk',
   username = 'uni\\au219464',
-  password = get_password("imap.au.dk", "uni\\au219464", 993)
+  password = get_password("imap.au.dk", "uni\\au219464", 993),
+  ssl = "tls1"
 }
 
 privateAccount = IMAP {
