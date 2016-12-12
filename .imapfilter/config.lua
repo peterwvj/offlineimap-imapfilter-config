@@ -36,6 +36,10 @@ paypal = privateAccount.INBOX:contain_from('PayPal')
 paypal:mark_seen()
 paypal:move_messages(privateAccount['[Gmail]/Trash'])
 
+announcements = privateAccount.INBOX:contain_from('events@fmeurope.org')
+announcements:mark_seen()
+announcements:move_messages(privateAccount['[Gmail]/Announcements'])
+
 --
 -- Work account
 --
