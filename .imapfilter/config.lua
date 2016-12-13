@@ -20,6 +20,12 @@ privateAccount = IMAP {
   ssl = "tls1"
 }
 
+function moveAsSeen(from, to, contain)
+   matches = from:contain_from(contain)
+   matches:mark_seen()
+   matches:move_messages(to);
+end
+
 --
 -- Private account
 --
@@ -36,9 +42,8 @@ paypal = privateAccount.INBOX:contain_from('PayPal')
 paypal:mark_seen()
 paypal:move_messages(privateAccount['[Gmail]/Trash'])
 
-announcements = privateAccount.INBOX:contain_from('events@fmeurope.org')
-announcements:mark_seen()
-announcements:move_messages(privateAccount['[Gmail]/Announcements'])
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'IntelliSys')
 
 --
 -- Work account
@@ -47,3 +52,6 @@ workAccount.INBOX:check_status()
 
 unreadWorkSpam = workAccount['Junk E-Mail']:is_unseen()
 unreadWorkSpam:mark_seen()
+
+moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], 'events@fmeurope.org')
+moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], 'IntelliSys')
