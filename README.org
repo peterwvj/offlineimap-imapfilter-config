@@ -21,19 +21,18 @@ This repository contains my OfflineIMAP configuration files:
 - =.offlineimap.py= A Python script that contains a single function
   that uses =gpg2= to read the password associated with the email
   account subject to synchronisation. The password is read from an
-  encrypted file =~/.authinfo.gpg= (not included in this repository)
-  that stores the authentication information (see below).
+  encrypted file =~/.authinfo.gpg= that stores the authentication
+  information.
 
-- =.imapfilter/config.lua= The imapfilter configuration file is
-  written in [[https://www.lua.org/][Lua]] and currently set up to mark all spam mails as read
-  (for both of my accounts). This configuration file uses the
-  authentication information stored in =~/.authinfo.gpg= to filter the
-  emails.
+- =.imapfilter/config.lua= The imapfilter configuration file that
+  handles filtering of emails for both accounts. This configuration
+  file uses the authentication information stored in
+  =~/.authinfo.gpg=.
 
 * Authentication information format
 
-The =~/.authinfo.gpg= file stores the authentication information for
-both accounts in the following format:
+The encrypted =~/.authinfo.gpg= file stores the authentication
+information for both accounts in the following format:
 
 #+BEGIN_SRC
 machine imap.gmail.com login peter.w.v.jorgensen@gmail.com port 993 password <password>
@@ -41,6 +40,8 @@ machine smtp.gmail.com login peter.w.v.jorgensen@gmail.com port 587 password <pa
 machine imap.au.dk login uni\au219464 port 993 password <password>
 machine asmtp.au.dk login uni\au219464 port 587 password <password>
 #+END_SRC
+
+This file is not included in this repository.
 
 * Credits
 
