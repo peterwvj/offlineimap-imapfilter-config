@@ -31,6 +31,8 @@ end
 --
 privateAccount.INBOX:check_status()
 
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
+
 unreadPrivateSpam = privateAccount['[Gmail]/Spam']:is_unseen()
 unreadPrivateSpam:mark_seen()
 
