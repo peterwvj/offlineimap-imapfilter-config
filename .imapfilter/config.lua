@@ -31,18 +31,12 @@ end
 --
 privateAccount.INBOX:check_status()
 
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
-
 unreadPrivateSpam = privateAccount['[Gmail]/Spam']:is_unseen()
 unreadPrivateSpam:mark_seen()
 
-linkedIn = privateAccount.INBOX:contain_from('LinkedIn')
-linkedIn:mark_seen()
-linkedIn:move_messages(privateAccount['[Gmail]/Trash'])
-
-paypal = privateAccount.INBOX:contain_from('PayPal')
-paypal:mark_seen()
-paypal:move_messages(privateAccount['[Gmail]/Trash'])
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'LinkedIn')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'IntelliSys')
