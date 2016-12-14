@@ -41,7 +41,7 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'LinkedIn')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
 
-for i,a in ipairs(announcers) do
+for _,a in ipairs(announcers) do
    moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], a)
 end
 
@@ -53,6 +53,6 @@ workAccount.INBOX:check_status()
 unreadWorkSpam = workAccount['Junk E-Mail']:is_unseen()
 unreadWorkSpam:mark_seen()
 
-for i,a in ipairs(announcers) do
+for _,a in ipairs(announcers) do
    moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], a)
 end
