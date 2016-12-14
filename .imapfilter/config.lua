@@ -26,6 +26,9 @@ function moveAsSeen(from, to, contain)
    matches:move_messages(to);
 end
 
+announcers = {'events@fmeurope.org', 
+              'IntelliSys'}
+
 --
 -- Private account
 --
@@ -38,8 +41,9 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'LinkedIn')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
 
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'IntelliSys')
+for i,a in ipairs(announcers) do
+   moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], a)
+end
 
 --
 -- Work account
@@ -49,5 +53,6 @@ workAccount.INBOX:check_status()
 unreadWorkSpam = workAccount['Junk E-Mail']:is_unseen()
 unreadWorkSpam:mark_seen()
 
-moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], 'events@fmeurope.org')
-moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], 'IntelliSys')
+for i,a in ipairs(announcers) do
+   moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], a)
+end
