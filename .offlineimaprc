@@ -23,7 +23,8 @@ localfolders = ~/Maildir/work
 # Set auth mechanism to avoid problem described in
 # https://github.com/OfflineIMAP/offlineimap/issues/285
 auth_mechanisms = LOGIN
-type = Gmail
+type = IMAP
+remotehost = imap.gmail.com
 remoteuser = peter.w.v.jorgensen@gmail.com
 remotepasseval = get_password("imap.gmail.com", "peter.w.v.jorgensen@gmail.com", "993")
 realdelete = yes
