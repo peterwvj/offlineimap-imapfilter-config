@@ -26,7 +26,8 @@ function moveAsSeen(from, to, contain)
    matches:move_messages(to);
 end
 
-announcers = {'events@fmeurope.org', 
+announcers = {'events@fmeurope.org',
+              'ICCS 2017',
               'IntelliSys'}
 
 --
