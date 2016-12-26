@@ -33,6 +33,7 @@ end
 
 announcers = {'events@fmeurope.org',
               'ICCS 2017',
+              'IJCR',
               'IntelliSys'}
 
 --
@@ -43,6 +44,7 @@ privateAccount.INBOX:check_status()
 markSeen(privateAccount['[Gmail]/Spam'])
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'LinkedIn')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'Spotify')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
 
