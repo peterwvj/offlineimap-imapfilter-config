@@ -24,7 +24,6 @@ localfolders = ~/Maildir/work
 # https://github.com/OfflineIMAP/offlineimap/issues/285
 auth_mechanisms = LOGIN
 type = Gmail
-synclabels = yes
 remoteuser = peter.w.v.jorgensen@gmail.com
 remotepasseval = get_password("imap.gmail.com", "peter.w.v.jorgensen@gmail.com", "993")
 realdelete = yes
