@@ -41,7 +41,23 @@ announcers = {'events@fmeurope.org',
 --
 privateAccount.INBOX:check_status()
 
-markSeen(privateAccount['[Gmail]/Spam'])
+allGmailFolders = {'[Gmail]/Announcements',
+                   '[Gmail]/Drafts',
+                   '[Gmail]/Kvitteringer',
+                   '[Gmail]/PhD',
+                   '[Gmail]/Sent Mail',
+                   '[Gmail]/Smuk',
+                   '[Gmail]/Spam',
+                   '[Gmail]/Trash'}
+
+-- Gmail tend to (sometimes) flag 'read' mails as 'unread' after they
+-- have been moved. To address this annoyance, all unseen mails in the
+-- Gmail folders will be marked as read. Note that 'allGmailFolders'
+-- includes all the folders that are synchronised using OfflineIMAP -
+-- except for the INBOX folder.
+for _,g in ipairs(allGmailFolders) do
+   markSeen(privateAccount[g])
+end
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'LinkedIn')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'Spotify')
