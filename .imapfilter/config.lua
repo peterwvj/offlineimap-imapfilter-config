@@ -31,6 +31,15 @@ function markSeen(folder)
    matches:mark_seen()
 end
 
+
+-- Only for testing purposes
+function printFields(messages, field)
+   for _,mesg in ipairs(messages) do
+      mbox, uid = table.unpack(mesg)
+      print(mbox[uid]:fetch_field(field))
+   end
+end
+
 announcers = {'events@fmeurope.org',
               'ICCS 2017',
               'IJCR',
