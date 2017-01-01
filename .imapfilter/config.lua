@@ -32,6 +32,19 @@ function markSeen(folder)
 end
 
 
+-- The 'match_*' functions are not supported by the IMAP protocol so
+-- what happens under the hood, is that the relevant parts of all the
+-- messages are downloaded and matched locally. Although the 'match_*'
+-- functions are not as efficient as the 'contain_*' functions (which
+-- are supported by the IMAP protocol) they are not subject to
+-- constraints imposed by the IMAP server. For example, some IMAP
+-- servers may not support search queries such as contain_from('xyz').
+function moveMatchesAsSeen(from, to, to_match)
+   results = from:match_from(to_match)
+   results:mark_seen()
+   results:move_messages(to);
+end
+
 -- Only for testing purposes
 function printFields(messages, field)
    for _,mesg in ipairs(messages) do
@@ -81,6 +94,8 @@ end
 -- Work account
 --
 workAccount.INBOX:check_status()
+
+moveMatchesAsSeen(workAccount.INBOX, privateAccount['Deleted Items'], 'SpringerAlerts@springeronline.com')
 
 markSeen(workAccount['Junk E-Mail'])
 
