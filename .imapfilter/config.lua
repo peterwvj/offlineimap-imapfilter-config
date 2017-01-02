@@ -95,7 +95,7 @@ end
 --
 workAccount.INBOX:check_status()
 
-moveMatchesAsSeen(workAccount.INBOX, privateAccount['Deleted Items'], 'SpringerAlerts@springeronline.com')
+moveMatchesAsSeen(workAccount.INBOX, workAccount['Deleted Items'], 'SpringerAlerts@springeronline.com')
 
 markSeen(workAccount['Junk E-Mail'])
 
