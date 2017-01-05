@@ -39,11 +39,6 @@ function printFields(messages, field)
    end
 end
 
-announcers = {'events@fmeurope.org',
-              'ICCS 2017',
-              'IJCR',
-              'IntelliSys'}
-
 --
 -- Private account
 --
@@ -72,9 +67,8 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'Spotify')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
 
-for _,a in ipairs(announcers) do
-   moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], a)
-end
+-- Call for papers and related announcements
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
 
 --
 -- Work account
@@ -82,7 +76,3 @@ end
 workAccount.INBOX:check_status()
 
 markSeen(workAccount['Junk E-Mail'])
-
-for _,a in ipairs(announcers) do
-   moveAsSeen(workAccount.INBOX, workAccount['PhD/Announcements'], a)
-end
