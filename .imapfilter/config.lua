@@ -67,7 +67,9 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'Spotify')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@dropboxmail.com')
-
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'do_not_reply@info-flyingblue.com')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@em.extendedstayamerica.com')
+  
 -- Call for papers and related announcements
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
 
