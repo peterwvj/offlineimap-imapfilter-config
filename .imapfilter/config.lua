@@ -72,6 +72,7 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@em.extendeds
   
 -- Call for papers and related announcements
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'it-fmeurope-events-request@lists.uu.se')
 
 --
 -- Work account
