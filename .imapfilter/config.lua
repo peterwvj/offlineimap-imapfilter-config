@@ -70,6 +70,7 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@dropboxmail.
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'do_not_reply@info-flyingblue.com')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@em.extendedstayamerica.com')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'nyhedsbrev@aarhustandcenter.dk')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'noreply@dialog.sydbank.dk')
   
 -- Call for papers and related announcements
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
