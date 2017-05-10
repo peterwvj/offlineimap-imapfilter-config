@@ -73,6 +73,7 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@em.extendeds
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'nyhedsbrev@aarhustandcenter.dk')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'noreply@dialog.sydbank.dk')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'kundenfeedback@tns-online.com')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'noreply@mailer.atlassian.com')
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'kvittering@midttrafik.dk')
   
