@@ -44,7 +44,9 @@ end
 --
 privateAccount.INBOX:check_status()
 
-allGmailFolders = {'[Gmail]/Announcements',
+allGmailFolders = {'[Gmail]/Accounts',
+                   '[Gmail]/Announcements',
+                   '[Gmail]/Bolig',
                    '[Gmail]/Drafts',
                    '[Gmail]/Kvitteringer',
                    '[Gmail]/PhD',
