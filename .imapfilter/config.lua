@@ -39,6 +39,12 @@ function printFields(messages, field)
    end
 end
 
+
+function cleanUpPrivateInbox(contain)
+   moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], contain)
+end
+
+
 --
 -- Private account
 --
@@ -65,20 +71,20 @@ for _,g in ipairs(allGmailFolders) do
    markSeen(privateAccount[g])
 end
 
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'LinkedIn')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'Spotify')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'PayPal')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@athletics.ucf.edu')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@ucfalumni.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@dropboxmail.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'do_not_reply@info-flyingblue.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], '@em.extendedstayamerica.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'info@orlandocitysc.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'nyhedsbrev@aarhustandcenter.dk')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'noreply@dialog.sydbank.dk')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'kundenfeedback@tns-online.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'noreply@mailer.atlassian.com')
-moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Trash'], 'service@endomondo.com')
+cleanUpPrivateInbox('LinkedIn')
+cleanUpPrivateInbox('Spotify')
+cleanUpPrivateInbox('PayPal')
+cleanUpPrivateInbox('@athletics.ucf.edu')
+cleanUpPrivateInbox('@ucfalumni.com')
+cleanUpPrivateInbox('@dropboxmail.com')
+cleanUpPrivateInbox('do_not_reply@info-flyingblue.com')
+cleanUpPrivateInbox('@em.extendedstayamerica.com')
+cleanUpPrivateInbox('info@orlandocitysc.com')
+cleanUpPrivateInbox('nyhedsbrev@aarhustandcenter.dk')
+cleanUpPrivateInbox('noreply@dialog.sydbank.dk')
+cleanUpPrivateInbox('kundenfeedback@tns-online.com')
+cleanUpPrivateInbox('noreply@mailer.atlassian.com')
+cleanUpPrivateInbox('service@endomondo.com')
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'kvittering@midttrafik.dk')
   
