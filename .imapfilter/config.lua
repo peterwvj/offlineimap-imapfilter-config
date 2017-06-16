@@ -87,6 +87,7 @@ cleanUpPrivateInbox('noreply@mailer.atlassian.com')
 cleanUpPrivateInbox('service@endomondo.com')
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'kvittering@midttrafik.dk')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'noreply@midttrafik.dk')
   
 -- Call for papers and related announcements
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'events@fmeurope.org')
