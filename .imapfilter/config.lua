@@ -89,6 +89,7 @@ cleanUpPrivateInbox('noreply@mail.fitnessworld.com')
 cleanUpPrivateInbox('racehall@smstiming.com')
 cleanUpPrivateInbox('feedback@mymaze.com')
 cleanUpPrivateInbox('springernature@newsletter.springernature.com')
+cleanUpPrivateInbox('no-reply@m.mail.coursera.org')
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'kvittering@midttrafik.dk')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'noreply@midttrafik.dk')
