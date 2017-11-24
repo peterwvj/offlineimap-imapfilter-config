@@ -71,26 +71,32 @@ for _,g in ipairs(allGmailFolders) do
    markSeen(privateAccount[g])
 end
 
-cleanUpPrivateInbox('LinkedIn')
-cleanUpPrivateInbox('Spotify')
-cleanUpPrivateInbox('PayPal')
-cleanUpPrivateInbox('@athletics.ucf.edu')
-cleanUpPrivateInbox('@ucfalumni.com')
-cleanUpPrivateInbox('@dropboxmail.com')
-cleanUpPrivateInbox('do_not_reply@info-flyingblue.com')
-cleanUpPrivateInbox('@em.extendedstayamerica.com')
-cleanUpPrivateInbox('info@orlandocitysc.com')
-cleanUpPrivateInbox('nyhedsbrev@aarhustandcenter.dk')
-cleanUpPrivateInbox('noreply@dialog.sydbank.dk')
-cleanUpPrivateInbox('kundenfeedback@tns-online.com')
-cleanUpPrivateInbox('noreply@mailer.atlassian.com')
-cleanUpPrivateInbox('service@endomondo.com')
-cleanUpPrivateInbox('noreply@mail.fitnessworld.com')
-cleanUpPrivateInbox('racehall@smstiming.com')
-cleanUpPrivateInbox('feedback@mymaze.com')
-cleanUpPrivateInbox('springernature@newsletter.springernature.com')
-cleanUpPrivateInbox('springer@newsletter.springer.com')
-cleanUpPrivateInbox('no-reply@m.mail.coursera.org')
+
+promotionPrivate = {'LinkedIn',
+                    'Spotify',
+                    'PayPal',
+                    '@athletics.ucf.edu',
+                    '@ucfalumni.com',
+                    '@dropboxmail.com',
+                    'do_not_reply@info-flyingblue.com',
+                    '@em.extendedstayamerica.com',
+                    'info@orlandocitysc.com',
+                    'nyhedsbrev@aarhustandcenter.dk',
+                    'noreply@dialog.sydbank.dk',
+                    'kundenfeedback@tns-online.com',
+                    'noreply@mailer.atlassian.com',
+                    'service@endomondo.com',
+                    'noreply@mail.fitnessworld.com',
+                    'racehall@smstiming.com',
+                    'feedback@mymaze.com',
+                    'springernature@newsletter.springernature.com',
+                    'springer@newsletter.springer.com',
+                    'no-reply@m.mail.coursera.org',
+                    'noreply@youtube.com'}
+
+for _,g in ipairs(promotionPrivate) do
+   cleanUpPrivateInbox(g)
+end
 
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'kvittering@midttrafik.dk')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Kvitteringer'], 'noreply@midttrafik.dk')
