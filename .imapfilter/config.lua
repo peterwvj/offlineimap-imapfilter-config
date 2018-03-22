@@ -114,6 +114,7 @@ moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'event
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'it-fmeurope-events-request@lists.uu.se')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'conference@thesai.org')
 moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'intellisys@saiconference.com')
+moveAsSeen(privateAccount.INBOX, privateAccount['[Gmail]/Announcements'], 'ftc@saiconference.com')
 
 --
 -- Work account
