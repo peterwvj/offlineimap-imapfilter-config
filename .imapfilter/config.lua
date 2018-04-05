@@ -101,6 +101,7 @@ promotionPrivate = {'LinkedIn',
                     'editorial02619@tb-pub.com',
                     'editorial03615@tb-publishing.com',
                     'info@racehall.com',
+                    'newsletter@email.ticketmaster.com',
                     'noreply@youtube.com'}
 
 for _,g in ipairs(promotionPrivate) do
