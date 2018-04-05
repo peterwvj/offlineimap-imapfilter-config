@@ -51,6 +51,7 @@ end
 privateAccount.INBOX:check_status()
 
 allGmailFolders = {'[Gmail]/Accounts',
+                   '[Gmail]/Akasse',
                    '[Gmail]/Announcements',
                    '[Gmail]/Bolig',
                    '[Gmail]/Car',
