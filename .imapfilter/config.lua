@@ -105,6 +105,7 @@ promotionPrivate = {'LinkedIn',
                     'info@racehall.com',
                     'newsletter@email.ticketmaster.com',
                     'help@eventbrite.com',
+                    'festivals-marketing@eventbriteacademy.com',
                     'info@mail.glassdoor.com',
                     'noreply@glassdoor.com',
                     'noreply@youtube.com'}
